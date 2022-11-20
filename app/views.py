@@ -5,3 +5,9 @@ def makeIndex(request):
 
 def makeProducts(request):
     return render (request, 'products.html')
+
+def makeAbout(request):
+    return render (request, 'about.html')
+
+def makeLogin(request):
+    return render (request, 'login.html')

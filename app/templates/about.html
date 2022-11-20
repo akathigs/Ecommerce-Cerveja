@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Royal Cervejas</title>
+</head>
+<body>          
+    
+            <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+              <div class="container flex flex-wrap items-center justify-between mx-auto">
+                    <img class="h-6 mr-3 sm:h-9" src="{% static 'images/k.png' %}">
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                  <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                      <a href="/" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-yellow-500 md:p-0 dark:text-white" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                      <a href="http://127.0.0.1:8000/about" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Produtos</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login/Cadastro</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+            <div class="container my-24 px-6 mx-auto">
+              <section class="mb-32 text-gray-800">
+                <div class="container mx-auto xl:px-32 text-center lg:text-left">
+                  <div class="grid lg:grid-cols-2 flex items-center">
+                    <div class="mb-12 lg:mb-0">
+                      <div
+                        class="block rounded-lg shadow-lg px-6 py-12 lg:py-6 xl:py-12 md:px-12 lg:-mr-14"
+                        style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px)"
+                      >
+                      <h3 class="text-2xl font-bold mb-3">A qualidade nunca sairá de linha</h3>
+                      <h5 class="text-lg text-yellow-500 font-bold mb-12 lg:mb-10 xl:mb-12">Um pouco sobre a Royal</h5>
+
+                      <p class="font-bold mb-4">O que é a Royal?</p>
+                      <p class="text-gra-500 mb-6">
+                        A royal é uma distribuidora de bebidas, com seu foco em cervejas importadas e artesanais.
+                      </p>
+
+                      <p class="font-bold mb-4"> Qual o diferencial da Royal?</p>
+                      <p class="text-gra-500 mb-6">
+                        A qualidade é o maior diferencial, o brasileiro está acostumado a ficar na rotina de cervejas de baixa qualidade, por que não fugir dessa rotina e experimentar novos ares?
+                      </p>
+
+                      <p class="font-bold mb-4">
+                        Por que a Royal?
+                      </p>
+                      <p class="text-gra-500">
+                        Ter uma distribuidora que prioriza a qualidade e armazenamento do produto é essencial para que a experiência do produto seja aproveitada ao máximo.
+                      </p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <img class="w-full rounded-lg shadow-lg" src="{% static 'images/about.jpg' %}">
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <footer class="bg-gray-200 text-center lg:text-left">
+              <div class="text-gray-700 text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Made By
+                <a class="text-gray-800" href="https://github.com/akathigs">akathigs</a>
+              </div>
+            </footer>
+            
+</body>
+</html>
