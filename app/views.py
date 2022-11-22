@@ -11,3 +11,6 @@ def makeAbout(request):
 
 def makeLogin(request):
     return render (request, 'login.html')
+
+def makeRegister(request):
+    return render (request, 'register.html')

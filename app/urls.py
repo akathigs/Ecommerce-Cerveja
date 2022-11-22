@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.makeIndex),
     path('products', views.makeProducts),
     path('about', views.makeAbout),
-    path('login', views.makeLogin)
+    path('login', views.makeLogin),
+    path('register', views.makeRegister)
 ]
