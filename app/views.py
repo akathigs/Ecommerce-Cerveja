@@ -14,3 +14,6 @@ def makeLogin(request):
 
 def makeRegister(request):
     return render (request, 'register.html')
+
+def makeContact(request):
+    return render (request, 'contact.html')
