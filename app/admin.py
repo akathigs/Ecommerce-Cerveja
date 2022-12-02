@@ -5,7 +5,7 @@ from .models import Cliente, Login, Produto, Frete, Compra
 class ProdutoAdmin(admin.ModelAdmin):
     model = Produto
 
-    list_display = ('nomeprod', 'quantidadedisp', 'valor')
+    list_display = ('nomeprod', 'quantidadedisp', 'valor', 'image')
 
 admin.site.register(Cliente)
 admin.site.register(Login)

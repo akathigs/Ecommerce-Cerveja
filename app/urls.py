@@ -6,6 +6,6 @@ urlpatterns = [
     path('products', views.ProdctListView.as_view()),
     path('about/', views.makeAbout),
     path('login', views.makeLogin),
-    path('register', views.makeRegister),
+    path('register', views.makeRegister, name='cadastro'),
     path('contact', views.makeContact)
 ]
