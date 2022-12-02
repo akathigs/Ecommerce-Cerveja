@@ -22,6 +22,9 @@ class Produto(models.Model):
     nomeprod = models.CharField(max_length=60)
     quantidadedisp = models.IntegerField()
     valor = models.FloatField()
+
+    def __str__(self) -> str:
+        return self.nomeprod
     
 class Frete(models.Model):
     destino = models.CharField(max_length=60)

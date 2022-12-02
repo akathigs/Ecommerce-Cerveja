@@ -1,4 +1,11 @@
 from django.shortcuts import render
+from .models import Produto
+from django.views.generic import ListView
+
+
+class ProdctListView(ListView):
+    model = Produto
+
 
 def makeIndex(request):
     return render (request, 'index.html')

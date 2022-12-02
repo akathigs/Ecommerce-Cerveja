@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Royal Cervejas</title>
+</head>
+
+<body>
+
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+            <img class="h-6 mr-3 sm:h-9" src="{% static 'images/k.png' %}">
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="/"
+                            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-yellow-500 md:p-0 dark:text-white"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/about"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/products"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Produtos</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/contact"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/login"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login/Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class = "flex "> 
+        {% for produto in object_list %}
+            <div class="bg-white">
+                  <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                    <div class="group relative">
+                      <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+                        <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                      </div>
+                      <div class="mt-4 flex justify-between">
+                        <div>
+                          <h3 class="text-sm text-gray-700">
+                            <a href="#">
+                              <span aria-hidden="true" class="absolute inset-0"></span>
+                              {{ produto.nomeprod }}
+                            </a>
+                          </h3>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">${{ produto.valor}}</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              
+         {% endfor%}
+
+
+    </div>
+    <footer class="bg-gray-200 text-center lg:text-left">
+        <div class="text-gray-700 text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Made By
+            <a class="text-gray-800" href="https://github.com/akathigs">akathigs</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
